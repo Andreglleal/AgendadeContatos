@@ -20,13 +20,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.trabalhoandroid.agendadecontatos.componentes.Botao
 import com.trabalhoandroid.agendadecontatos.componentes.OutlinedTextFieldCuston
 import com.trabalhoandroid.agendadecontatos.ui.theme.Purple400
+import com.trabalhoandroid.agendadecontatos.ui.theme.White
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -47,7 +47,7 @@ fun SalvarContatos(navController: NavController){
                 title = {
                     Text(
                         text = "Salvar Contatos",
-                        color = Color.White
+                        color = White
                     )
                 }
             )
