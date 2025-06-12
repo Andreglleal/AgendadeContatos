@@ -19,20 +19,19 @@ class MainActivity : ComponentActivity() {
         setContent {
             AgendaDeContatosTheme {
                 val navController = rememberNavController()
-
                 NavHost(
                     navController = navController,
                     startDestination = "listaContatos"
                 ) {
-                    composable("listaContatos") {
+                    composable(route = "listaContatos") {
                         ListaContatos(navController)
 
                     }
-                    composable("salvarContatos") {
+                    composable(route = "salvarContatos") {
                         SalvarContatos(navController)
 
                     }
-                    composable("atualizarContatos") {
+                    composable(route = "atualizarContatos") {
                         AtualizarContatos(navController)
                     }
                 }
