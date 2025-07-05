@@ -7,7 +7,7 @@ import com.trabalhoandroid.agendadecontatos.constant.Constantes
 
 @Entity(tableName = Constantes.TABELA_CONTATOS)
 data class Contato (
-    @ColumnInfo(name = "nome") val name: String,
+    @ColumnInfo(name = "nome") val nome: String,
     @ColumnInfo(name = "sobrenome") val sobrenome: String,
     @ColumnInfo(name = "idade") val idade: String,
     @ColumnInfo(name = "celular") val celular: String

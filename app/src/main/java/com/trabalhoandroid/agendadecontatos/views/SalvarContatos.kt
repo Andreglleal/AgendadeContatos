@@ -26,9 +26,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.trabalhoandroid.agendadecontatos.AppDatabase
 import com.trabalhoandroid.agendadecontatos.componentes.Botao
 import com.trabalhoandroid.agendadecontatos.componentes.OutlinedTextFieldCuston
 import com.trabalhoandroid.agendadecontatos.dao.ContatoDao
+import com.trabalhoandroid.agendadecontatos.model.Contato
 import com.trabalhoandroid.agendadecontatos.ui.theme.Purple400
 import com.trabalhoandroid.agendadecontatos.ui.theme.White
 import kotlinx.coroutines.Dispatchers
@@ -131,6 +133,9 @@ fun SalvarContatos(navController: NavController){
                             mensagem = false
                         }else{
                             mensagem = true
+                            val contato = Contato( nome = nome, sobrenome = sobrenome, idade = idade, celular = celular)
+                            contatoDao = AppDatabase.getInstance(context).contatoDao()
+                            contatoDao.gravar(contato)
                         }
                     }
                     scope.launch(Dispatchers.Main){

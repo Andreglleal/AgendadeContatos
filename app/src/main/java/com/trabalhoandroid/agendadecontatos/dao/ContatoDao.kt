@@ -9,7 +9,7 @@ import com.trabalhoandroid.agendadecontatos.model.Contato
 interface ContatoDao {
 
     @Insert
-    fun gravar (listaContatos: MutableList<Contato>)
+    fun gravar (listaContatos: Contato)
 
     @Query("SELECT * FROM ` tabela_contatos ` ORDER BY nome ASC")
     fun getContatos(): MutableList<Contato>
